@@ -1,0 +1,114 @@
+block body 
+    main 
+        .container
+            .wrapper
+
+                h1.visually-hidden Корзина
+                ul.breadcrumbs
+                    li.breadcrumbs__item
+                        a(href="#") Главная
+                    li.breadcrumbs__item /
+                    li.breadcrumbs__item.breadcrumbs__item--active
+                        a(href="#") Корзина
+                section.cart
+                    .cart__basket
+                        h2 Корзина
+                        .cart__form
+                            p Есть аккаунт? 
+                            a(href="#") Войти
+
+                        form(action="#").form
+
+                            .form__input-wrapper.form__input-wrapper--address
+                                input(type="text" class="form__input" id="address" name="address" placeholder=" " required)
+                                label.form__labele(for="address") Адрес 
+
+                            .form__iframe-wrapper
+                                .dd(id="map")
+            
+                            //- .form__adress
+                            //-     label(for="adress") Адрес
+                            //-         input.form__accaunt-input(type="text" id="adress" placeholder="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152") 
+                            //-         p г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152 
+
+                            //- iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1185.046860826007!2d30.429674482558163!3d60.03159784991486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963339410d08ff%3A0xf62f8096bec3608a!2z0L_RgC4g0J_RgNC-0YHQstC10YnQtdC90LjRjywgOTksIDE1Miwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NTI5OQ!5e0!3m2!1sru!2sru!4v1643563148479!5m2!1sru!2sru" allowfullscreen="" loading="lazy")
+
+                            .form__personal
+                                .form__group
+                                    input(type="text" id="name"  pattern="^[А-Яа-яЁё\s]+$" title="Только буквы" placeholder=" " required).form__input
+                                    label(for="name").form__label Ваше Имя
+
+                                .form__group
+                                    input(type="tel" id="phone" placeholder=" " required).form__input
+                                    label(for="phone").form__label Ваш Телефон
+
+                                .form__group.form__group--mail
+                                    input(type="email" id="mail" placeholder=" " required).form__input
+                                    label(for="mail").form__label Ваш Email
+                            .form__categoty
+                                label(for="category")
+                                    select(name="category" required)
+                                        option(value="") Тип упаковки
+                                        option(value="none") без упаковки
+                                        option(value="standart") стандартная
+                                        option(value="present") подарочная
+
+                            label(for="comment")
+                            textarea(name="comment" cols="30" rows="1" id="comment" placeholder="Введите комментарий")
+                            
+                            .cart__products.products
+
+                                h3 Выбранные товары:
+                                ul.products__list 
+                                    li.products__item
+                                        a(href="#")   
+                                            img(src="../../img/produkt.jpg", alt="produkt")
+                                        .products__item-about
+                                            h4 Товар 1
+                                            p.products__item-description Описание товара, которое может быть длинным
+                                            .products__amount
+                                                button(data-action="minus" type="button").products__btn.products__btn--minus 
+                                                .counter(data-counter) 1
+                                                button(data-action="plus" type="button").products__btn.products__btn--plus 
+
+                                        .products__item-price.price     
+                                            p.price__currency 1090 руб.
+                                            button(type="button").products__del Удалить                    
+                                    
+                                    li.products__item.products__item--big-text  
+                                        a(href="#")   
+                                            img(src="../../img/produkt.jpg", alt="produkt")
+                                        .products__item-about
+                                            h4 Товар 2
+                                            p.products__item-description Описание товара, которое может быть очень-очень длинным
+                                            .products__amount
+                                                button(data-action="minus" type="button").products__btn.products__btn--minus 
+                                                .counter(data-counter) 1
+                                                button(data-action="plus" type="button").products__btn.products__btn--plus 
+                                        .products__item-price.price      
+                                            p.price__currency 700 руб.
+                                            button(type="button").products__del Удалить 
+                                    
+                                    li.products__item 
+                                        a(href="#")   
+                                            img(src="../../img/produkt.jpg", alt="produkt")
+                                        .products__item-about
+                                            h4 Товар 3
+                                            p.products__item-description.products__item-description--little-text Короткое описание товара
+                                            .products__amount
+                                                button(data-action="minus" type="button").products__btn.products__btn--minus 
+                                                .counter(data-counter) 2
+                                                button(data-action="plus" type="button").products__btn.products__btn--plus 
+                                        .products__item-price.price      
+                                            p.price__currency 2000 руб.
+                                            button(type="button").products__del Удалить     
+                                button(type="submit").products__btn-buy Купить
+                    //- .cart__map
+                    //-     iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1185.046860826007!2d30.429674482558163!3d60.03159784991486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963339410d08ff%3A0xf62f8096bec3608a!2z0L_RgC4g0J_RgNC-0YHQstC10YnQtdC90LjRjywgOTksIDE1Miwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NTI5OQ!5e0!3m2!1sru!2sru!4v1643563148479!5m2!1sru!2sru" allowfullscreen="" loading="lazy")
+                    
+                    .cart__map-total
+                        p Итог:
+                        .cart__map-tot
+                            span.total__price 0 
+                            p руб.
+

@@ -1,0 +1,35 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.menu a {
+  color: #9F9F9F;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.menu :hover {
+  color: #000;
+  transition: 0.5s;
+}
+
+@media (max-width: 320px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu__logo {
+  margin-top: -30px;
+  padding: 0 34px;
+}
+@media (max-width: 320px) {
+  .menu__logo {
+    margin: 0 auto;
+    margin-top: -96px;
+  }
+}

@@ -1,0 +1,15 @@
+.phone-mask input[type="tel"] {
+  font-size: 26px;
+  line-height: 30px;
+  min-width: 300px;
+  border: 2px solid #000000;
+  outline: none;
+  -webkit-transition: border 0.3s ease;
+  -o-transition: border 0.3s ease;
+  transition: border 0.3s ease;
+}
+
+.phone-mask input[type="tel"]:hover,
+.phone-mask input[type="tel"]:focus {
+  border-color: #2c39f2;
+}
